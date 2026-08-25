@@ -54,11 +54,6 @@ a {
     border-color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
-::selection {
-  background: var(--ink);
-  color: var(--bg);
-}
-
 /* ---------- Masthead ---------- */
 
 .masthead {
