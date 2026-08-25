@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
-   Portfolio — editorial / Swiss-inspired stylesheet
+   Portfolio — quiet single-column stylesheet
    Fraunces (display serif) + Inter (text sans)
-   Monochrome: warm paper, near-black ink, muted gray-brown. No accent hue.
+   Monochrome: warm paper, near-black ink, muted gray-brown.
    No border-radius. No box-shadow. No gradients. 1px ink rules only.
    ------------------------------------------------------------------ */
 
@@ -13,9 +13,6 @@
 
   --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  --max-width: 1100px;
-  --pad-inline: 2rem;
 }
 
 /* ---------- Reset ---------- */
@@ -37,15 +34,12 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1rem;
-  line-height: 1.6;
-  padding-inline: var(--pad-inline);
+  line-height: 1.65;
+  max-width: 680px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
 
 ul,
@@ -57,7 +51,7 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease, background-color 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 ::selection {
@@ -65,35 +59,30 @@ a {
   color: var(--paper);
 }
 
-/* Headings default to the display serif */
 h1,
-h2,
 h3 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 /* ---------- Masthead ---------- */
 
 .masthead {
-  max-width: var(--max-width);
-  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
-  padding-block: 1.75rem 1.5rem;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.5rem 1.25rem;
   border-bottom: 1px solid var(--line);
 }
 
 .masthead-name {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   letter-spacing: -0.01em;
-  color: var(--ink);
 }
 
 .masthead-name:hover {
@@ -104,13 +93,12 @@ h3 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .masthead-nav a {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--ink);
 }
 
 .masthead-nav a:hover {
@@ -119,12 +107,10 @@ h3 {
 
 .masthead-nav a.resume-link {
   border: 1px solid var(--ink);
-  padding: 0.45em 0.95em;
-  font-size: 0.72rem;
-  font-weight: 500;
+  padding: 0.4em 0.85em;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--ink);
 }
 
 .masthead-nav a.resume-link:hover {
@@ -132,57 +118,46 @@ h3 {
   color: var(--paper);
 }
 
-/* ---------- Intro (section 00) ---------- */
+/* ---------- Sections ---------- */
+
+.section {
+  border-top: 1px solid var(--line);
+  padding-block: 2.75rem 3.25rem;
+}
 
 .section--intro {
   border-top: 0; /* masthead already draws the rule above it */
-  padding-block: 4rem 5rem;
 }
 
-.section--intro .section-body {
-  max-width: 40rem;
-}
-
-.kicker {
+.section-label {
+  font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--muted);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
+/* ---------- Intro ---------- */
+
 .section--intro h1 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  line-height: 1.35;
   letter-spacing: -0.01em;
-  color: var(--ink);
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .hero-bio {
   font-size: 0.95rem;
   color: var(--muted);
-  max-width: 34rem;
-  margin-bottom: 1.75rem;
-}
-
-.hero-bio a {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.hero-bio a:hover {
-  color: var(--muted);
+  margin-bottom: 1.5rem;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .hero-links a {
@@ -200,96 +175,19 @@ h3 {
   text-decoration-color: var(--ink);
 }
 
-/* ---------- Sections ---------- */
-
-.section {
-  max-width: var(--max-width);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  column-gap: 4rem;
-  align-items: start;
-  border-top: 1px solid var(--line);
-  padding-block: 6rem;
-}
-
-.section-marker {
-  position: sticky;
-  top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.section-num {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 0.95rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--muted);
-}
-
-.section-name {
-  font-size: 0.72rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--ink);
-}
-
-.section-body {
-  min-width: 0;
-}
-
 /* ---------- Work ---------- */
 
 .work-list {
-  list-style: none;
-  counter-reset: none;
-}
-
-.work-item {
-  display: grid;
-  grid-template-columns: 3rem 1fr;
-  column-gap: 1.5rem;
-  align-items: start;
-  padding-block: 2.75rem;
-  border-top: 1px solid var(--line);
-}
-
-.work-item:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.work-item:last-child {
-  padding-bottom: 0;
-}
-
-.work-index {
-  font-family: var(--serif);
-  font-size: 0.85rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--muted);
-  padding-top: 0.35rem;
-}
-
-.work-main {
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .work-title {
-  font-family: var(--serif);
+  font-size: 1.15rem;
   font-weight: 600;
-  font-size: 1.35rem;
   letter-spacing: -0.01em;
-  color: var(--ink);
-  margin-bottom: 0.35rem;
-}
-
-.work-title a {
-  color: var(--ink);
-  text-decoration: none;
+  margin-bottom: 0.25rem;
 }
 
 .work-title a:hover {
@@ -300,16 +198,15 @@ h3 {
 
 .work-sub {
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--muted);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
 }
 
 .work-desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--muted);
-  max-width: 55ch;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.85rem;
 }
 
 .work-desc a {
@@ -336,23 +233,21 @@ h3 {
 .exp-list {
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
+  gap: 2rem;
 }
 
 .exp-head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 0.2rem;
+  gap: 1.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .exp-org {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.005em;
-  color: var(--ink);
+  font-size: 0.98rem;
 }
 
 .exp-time {
@@ -363,15 +258,13 @@ h3 {
 }
 
 .exp-role {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 500;
   font-style: italic;
-  color: var(--ink);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .exp-notes {
-  list-style: none;
   font-size: 0.9rem;
   color: var(--muted);
   display: flex;
@@ -388,7 +281,6 @@ h3 {
   content: "\2014"; /* em dash */
   position: absolute;
   left: 0;
-  color: var(--muted);
 }
 
 /* ---------- Skills ---------- */
@@ -396,13 +288,13 @@ h3 {
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .skill-row {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 130px 1fr;
+  column-gap: 1.5rem;
   align-items: baseline;
 }
 
@@ -412,31 +304,23 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--muted);
-  padding-top: 0.2em;
 }
 
 .skill-row dd {
-  font-size: 0.95rem;
-  color: var(--ink);
+  font-size: 0.92rem;
 }
 
 /* ---------- Colophon ---------- */
 
 .colophon {
-  max-width: var(--max-width);
-  margin-inline: auto;
   border-top: 1px solid var(--line);
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.75rem 2rem;
-  padding-block: 2rem 3rem;
+  gap: 0.5rem 1.5rem;
+  padding-block: 1.75rem 2.5rem;
   font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.colophon a {
   color: var(--muted);
 }
 
@@ -451,60 +335,24 @@ h3 {
   text-underline-offset: 4px;
 }
 
-.colophon .to-top:hover {
-  color: var(--ink);
-}
-
 /* ---------- Responsive ---------- */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   body {
     padding-inline: 1.25rem;
   }
 
-  .masthead {
-    padding-block: 1.25rem;
-  }
-
-  .masthead-nav {
-    gap: 1.1rem 1.5rem;
-  }
-
-  .section--intro {
-    padding-block: 2.5rem 3rem;
-  }
-
   .section {
-    display: block;
-    padding-block: 3.5rem;
-  }
-
-  .section-marker {
-    position: static;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 2.25rem;
-  }
-
-  .work-item {
-    grid-template-columns: 2.25rem 1fr;
-    column-gap: 1rem;
-    padding-block: 2rem;
+    padding-block: 2.25rem 2.5rem;
   }
 
   .exp-head {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.15rem;
+    gap: 0.1rem;
   }
 
   .skill-row {
     grid-template-columns: 1fr;
-    row-gap: 0.35rem;
-  }
-
-  .colophon {
-    padding-block: 1.5rem 2.5rem;
+    row-gap: 0.3rem;
   }
 }
