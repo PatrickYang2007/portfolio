@@ -23,17 +23,9 @@
 <main id="top">
 
   <section class="intro" id="about">
-    <div class="intro-main">
-      <h1>Deep learning for genomics, and the systems around it.</h1>
-      <p class="bio">CS undergraduate at Cornell and research software engineer at Yale's Garg Lab, working on deep learning for genomic sequences.</p>
-    </div>
-    <aside class="intro-meta">
-      <dl class="meta-list">
-        <div class="meta-row"><dt>Currently</dt><dd>Research Software Engineer, Garg Lab, Yale University</dd></div>
-        <div class="meta-row"><dt>School</dt><dd>Cornell University, B.S. CS, expected Dec 2028</dd></div>
-        <div class="meta-row"><dt>Contact</dt><dd><a href="mailto:py235@cornell.edu">py235@cornell.edu</a><br><a href="https://github.com/PatrickYang2007" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/patrick-yang-26849a287/" target="_blank" rel="noopener">LinkedIn</a></dd></div>
-      </dl>
-    </aside>
+    <h1>Deep learning for genomics, and the systems around it.</h1>
+    <p class="bio">CS undergraduate at Cornell and research software engineer at Yale's Garg Lab, working on deep learning for genomic sequences.</p>
+    <p class="intro-links"><a href="mailto:py235@cornell.edu">py235@cornell.edu</a> · <a href="https://github.com/PatrickYang2007" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/patrick-yang-26849a287/" target="_blank" rel="noopener">LinkedIn</a></p>
   </section>
 
   <section class="section" id="work">
@@ -41,20 +33,17 @@
     <div class="work-grid">
       <article class="work-card">
         <h3 class="work-title"><a href="https://github.com/PatrickYang2007/regsearch" target="_blank" rel="noopener">regsearch</a></h3>
-        <p class="work-sub">Hybrid search over genomics literature</p>
-        <p class="work-desc">Hybrid retrieval over 19,791 genomics abstracts, fusing full-text and pgvector embedding search with reciprocal rank fusion — 0.82 Recall@50 and 0.85 nDCG@10 on a graded-relevance harness. A fine-tuned cross-encoder reranker adds +41% MRR over off-the-shelf.</p>
+        <p class="work-desc">Hybrid search over genomics literature — full-text and embedding retrieval fused with reciprocal rank fusion, plus a fine-tuned reranker for +41% MRR.</p>
         <p class="work-tags">Python · PostgreSQL · PyTorch · FastAPI</p>
       </article>
       <article class="work-card">
         <h3 class="work-title"><a href="https://github.com/PatrickYang2007/remapd" target="_blank" rel="noopener">remapd</a></h3>
-        <p class="work-sub">Congressional redistricting engine — Claude Hackathon finalist (~50 teams)</p>
-        <p class="work-desc">Scores congressional maps for all 50 states on population balance, compactness, and voting-rights proxies. A simulated-annealing optimizer improves the median objective +27% over random baselines, running 700 iterations on 254 counties in under a second.</p>
+        <p class="work-desc">Congressional redistricting engine, Claude Hackathon finalist (~50 teams) — scores maps for all 50 states and optimizes them with simulated annealing (+27% median objective).</p>
         <p class="work-tags">Python · LangGraph · Claude API · FastAPI · Next.js</p>
       </article>
       <article class="work-card">
         <h3 class="work-title">Heterogeneity Score</h3>
-        <p class="work-sub">Chromatin variability from DNA sequence</p>
-        <p class="work-desc">Deep learning pipeline predicting chromatin heterogeneity from DNA alone: 5.6M regions as 2048 bp windows into an attention-pooled CNN. Also diagnosed why the task resists learning — 41% of labels saturate at the score's ceiling, and predictive signal plateaus at 256 bp.</p>
+        <p class="work-desc">Attention-pooled CNN predicting chromatin variability from DNA sequence alone across 5.6M genomic regions, with an analysis of why the task resists learning.</p>
         <p class="work-tags">PyTorch · SLURM · Genomics</p>
       </article>
     </div>
@@ -68,16 +57,14 @@
           <div class="exp-head"><h3 class="exp-org">Yale University — Garg Lab</h3><span class="exp-time">January 2026 – Present</span></div>
           <p class="exp-role">Research Software Engineer</p>
           <ul class="exp-notes">
-            <li>Running a matched-capacity controlled study across 9 activation-function arms, testing learned rational activations against GELU on sequence-to-expression regression.</li>
-            <li>Ran a fault-tolerant 315-run experiment grid on preemptible A100 GPUs with SLURM and signal-driven checkpointing; trained a 14M-parameter 1D CNN to 0.680 test Pearson and interpreted it with DeepLIFT and in-silico mutagenesis.</li>
+            <li>Controlled study of learned rational activations vs. GELU on sequence-to-expression regression, run as a 315-experiment grid on preemptible A100 GPUs.</li>
           </ul>
         </li>
         <li class="exp-item">
           <div class="exp-head"><h3 class="exp-org">Students of STEM</h3><span class="exp-time">February 2023 – April 2025</span></div>
           <p class="exp-role">Chief Technology Officer</p>
           <ul class="exp-notes">
-            <li>Directed engineering for an international nonprofit of 100+ volunteers and led fundraising generating $12,000+.</li>
-            <li>Launched the organization's first online course platform and scaled it to 4,000+ students.</li>
+            <li>Directed engineering for an international nonprofit, launching a course platform that reached 4,000+ students.</li>
           </ul>
         </li>
       </ul>
@@ -101,37 +88,19 @@
           <li class="exp-item">
             <div class="exp-head"><h3 class="exp-org">Adjutant General's Coin for Excellence</h3><span class="exp-time">June 2025</span></div>
             <p class="exp-role">Connecticut National Guard</p>
-            <ul class="exp-notes">
-              <li>Awarded by the Adjutant General for civilian contribution and leadership.</li>
-            </ul>
           </li>
           <li class="exp-item">
             <div class="exp-head"><h3 class="exp-org">Army ROTC Scholarship</h3><span class="exp-time">March 2025</span></div>
             <p class="exp-role">U.S. Army Cadet Command</p>
-            <ul class="exp-notes">
-              <li>Competitive scholarship recognizing academic standing and leadership.</li>
-            </ul>
           </li>
           <li class="exp-item">
             <div class="exp-head"><h3 class="exp-org">CT Boys State — Governor</h3><span class="exp-time">June 2024</span></div>
             <p class="exp-role">American Legion</p>
-            <ul class="exp-notes">
-              <li>Elected Governor of Connecticut Boys State, a statewide student leadership program.</li>
-            </ul>
           </li>
         </ul>
       </section>
     </div>
   </div>
-
-  <section class="section" id="skills">
-    <h2 class="section-label">Skills</h2>
-    <dl class="skills">
-      <div class="skill-row"><dt>Languages</dt><dd>Python, C++, Java, JavaScript, SQL</dd></div>
-      <div class="skill-row"><dt>ML &amp; LLMs</dt><dd>PyTorch, NumPy, Pandas, scikit-learn, deep learning, fine-tuning, RAG, embeddings &amp; vector search, LLM-as-judge evals, LangGraph</dd></div>
-      <div class="skill-row"><dt>Systems &amp; tools</dt><dd>PostgreSQL, pgvector, FastAPI, Next.js, SLURM/HPC/shell scripting, Git</dd></div>
-    </dl>
-  </section>
 
 </main>
 <footer class="colophon">
