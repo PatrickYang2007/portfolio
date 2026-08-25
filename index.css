@@ -137,11 +137,11 @@ h3 {
 .hero {
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-block: 6rem 7rem;
+  padding-block: 3.5rem 4rem;
 }
 
 .hero-text {
-  max-width: 44rem;
+  max-width: 40rem;
 }
 
 .kicker {
@@ -150,23 +150,23 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-text h1 {
-  font-size: clamp(2.6rem, 5.5vw, 4rem);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 .hero-bio {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--muted);
   max-width: 34rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .hero-bio a {
@@ -472,11 +472,7 @@ h3 {
   }
 
   .hero {
-    padding-block: 3.5rem 4.5rem;
-  }
-
-  .hero-text h1 {
-    font-size: clamp(2.1rem, 9vw, 2.8rem);
+    padding-block: 2.5rem 3rem;
   }
 
   .section {
