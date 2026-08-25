@@ -132,15 +132,14 @@ h3 {
   color: var(--paper);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Intro (section 00) ---------- */
 
-.hero {
-  max-width: var(--max-width);
-  margin-inline: auto;
-  padding-block: 3.5rem 4rem;
+.section--intro {
+  border-top: 0; /* masthead already draws the rule above it */
+  padding-block: 4rem 5rem;
 }
 
-.hero-text {
+.section--intro .section-body {
   max-width: 40rem;
 }
 
@@ -153,7 +152,7 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.hero-text h1 {
+.section--intro h1 {
   font-size: 1.35rem;
   font-weight: 500;
   line-height: 1.35;
@@ -471,7 +470,7 @@ h3 {
     gap: 1.1rem 1.5rem;
   }
 
-  .hero {
+  .section--intro {
     padding-block: 2.5rem 3rem;
   }
 
