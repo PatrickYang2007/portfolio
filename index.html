@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patrick Yang</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/jpeg" href="pictures/PY-logos.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="masthead">
+  <a class="masthead-name" href="#top">Patrick Yang</a>
+  <nav class="masthead-nav">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
+    <a class="resume-link" href="resume/Patrick_Yang_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Computer Science — Cornell University</p>
+      <h1>Machine learning for genomics, retrieval systems, and the code around them.</h1>
+      <p class="hero-bio">I'm a CS undergraduate at Cornell's College of Engineering (B.S. expected December 2028) and an undergraduate researcher at Yale's Garg Lab, where I work on neural networks for genomic sequences. Outside the lab I build retrieval and agent systems, with a general interest in machine learning and NLP.</p>
+      <ul class="hero-links">
+        <li><a href="https://github.com/PatrickYang2007" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/patrick-yang-26849a287/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:py235@cornell.edu">py235@cornell.edu</a></li>
+      </ul>
+    </div>
+    <figure class="hero-figure">
+      <img src="pictures/IMG_4449.JPG" alt="Patrick Yang" class="hero-photo">
+    </figure>
+  </section>
+
+  <section class="section" id="work">
+    <div class="section-marker"><span class="section-num">01</span><span class="section-name">Selected work</span></div>
+    <div class="section-body">
+      <ol class="work-list">
+        <li class="work-item">
+          <span class="work-index">01</span>
+          <div class="work-main">
+            <h3 class="work-title"><a href="https://github.com/PatrickYang2007/regsearch" target="_blank" rel="noopener">regsearch</a></h3>
+            <p class="work-sub">Hybrid search over genomics literature</p>
+            <p class="work-desc">RAG-style hybrid retrieval over 19,791 genomics abstracts (99,567 passages), fusing SQL full-text search and pgvector embedding search with reciprocal rank fusion behind a FastAPI REST API. A graded-relevance eval harness — 704 pooled candidates across 40 queries, LLM-as-judge with hand adjudication — shows hybrid beats either mode alone: 0.82 Recall@50, 0.85 nDCG@10. A cross-encoder reranker fine-tuned on citation-derived labels adds +41% MRR over off-the-shelf.</p>
+            <p class="work-tags">Python · PostgreSQL · PyTorch · FastAPI</p>
+          </div>
+        </li>
+        <li class="work-item">
+          <span class="work-index">02</span>
+          <div class="work-main">
+            <h3 class="work-title"><a href="https://github.com/PatrickYang2007/remapd" target="_blank" rel="noopener">remapd</a></h3>
+            <p class="work-sub">Congressional redistricting engine — Claude Hackathon finalist (~50 teams)</p>
+            <p class="work-desc">Scores congressional maps for all 50 states on population balance, compactness, and voting-rights proxies. A simulated-annealing optimizer over county-to-district assignments in NumPy improves the median objective +27% over random baselines, running 700 iterations on 254 counties in under a second. A 5-node LangGraph pipeline with Claude tool use turns metric vectors into streamed analytical memos grounded in US Census API calls.</p>
+            <p class="work-tags">Python · LangGraph · Claude API · FastAPI · Next.js</p>
+          </div>
+        </li>
+        <li class="work-item">
+          <span class="work-index">03</span>
+          <div class="work-main">
+            <h3 class="work-title">Heterogeneity Score</h3>
+            <p class="work-sub">Chromatin variability from DNA sequence</p>
+            <p class="work-desc">End-to-end deep learning pipeline predicting chromatin heterogeneity (0–1) from DNA alone: 5.6M regions as 2048 bp one-hot windows, whole-chromosome train/val/test splits, and an attention-pooled CNN. Also diagnosed why the task resists learning — 41% of labels saturate at the score's ceiling, an artifact intrinsic to the label definition, and context-crop sweeps show predictive signal plateaus at 256 bp.</p>
+            <p class="work-tags">PyTorch · SLURM · Genomics</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-marker"><span class="section-num">02</span><span class="section-name">Experience</span></div>
+    <div class="section-body">
+      <ul class="exp-list">
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Yale University — Garg Lab</h3><span class="exp-time">January 2026 – Present</span></div>
+          <p class="exp-role">Undergraduate Researcher</p>
+          <ul class="exp-notes">
+            <li>Running a matched-capacity controlled study across 9 activation-function arms, testing learned rational activations against GELU on sequence-to-expression regression.</li>
+            <li>Found two silent data-corruption bugs in a 5.6M-region genomic dataset: 38% duplicate rows, and a silently failing peak caller discarding 48% of the data.</li>
+            <li>Ran a fault-tolerant 315-run experiment grid on preemptible A100 GPUs with SLURM and signal-driven checkpointing; trained a 14M-parameter 1D CNN to 0.680 test Pearson and interpreted it with DeepLIFT and in-silico mutagenesis.</li>
+          </ul>
+        </li>
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Students of STEM</h3><span class="exp-time">February 2023 – April 2025</span></div>
+          <p class="exp-role">Chief Technology Officer</p>
+          <ul class="exp-notes">
+            <li>Directed engineering for an international nonprofit of 100+ volunteers and led fundraising generating $12,000+.</li>
+            <li>Launched the organization's first online course platform and scaled it to 4,000+ students.</li>
+          </ul>
+        </li>
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Independent</h3><span class="exp-time">June 2022 – January 2025</span></div>
+          <p class="exp-role">Freelance Web Developer</p>
+          <ul class="exp-notes">
+            <li>Designed and built websites for small clients, working remotely.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-marker"><span class="section-num">03</span><span class="section-name">Education</span></div>
+    <div class="section-body">
+      <ul class="exp-list">
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Cornell University, College of Engineering</h3><span class="exp-time">Expected December 2028</span></div>
+          <p class="exp-role">B.S. Computer Science — GPA 3.5/4.0</p>
+          <ul class="exp-notes">
+            <li>Coursework: Reinforcement Learning, Machine Learning, Numerical Analysis, Probability &amp; Statistics, Object-Oriented Programming &amp; Data Structures.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="awards">
+    <div class="section-marker"><span class="section-num">04</span><span class="section-name">Awards</span></div>
+    <div class="section-body">
+      <ul class="exp-list">
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Adjutant General's Coin for Excellence</h3><span class="exp-time">June 2025</span></div>
+          <p class="exp-role">Connecticut National Guard</p>
+          <ul class="exp-notes">
+            <li>Awarded by the Adjutant General for civilian contribution and leadership.</li>
+          </ul>
+        </li>
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">Army ROTC Scholarship</h3><span class="exp-time">March 2025</span></div>
+          <p class="exp-role">U.S. Army Cadet Command</p>
+          <ul class="exp-notes">
+            <li>Competitive scholarship recognizing academic standing and leadership.</li>
+          </ul>
+        </li>
+        <li class="exp-item">
+          <div class="exp-head"><h3 class="exp-org">CT Boys State — Governor</h3><span class="exp-time">June 2024</span></div>
+          <p class="exp-role">American Legion</p>
+          <ul class="exp-notes">
+            <li>Elected Governor of Connecticut Boys State, a statewide student leadership program.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-marker"><span class="section-num">05</span><span class="section-name">Skills</span></div>
+    <div class="section-body">
+      <dl class="skills">
+        <div class="skill-row"><dt>Languages</dt><dd>Python, C++, Java, JavaScript, SQL</dd></div>
+        <div class="skill-row"><dt>ML &amp; LLMs</dt><dd>PyTorch, NumPy, Pandas, scikit-learn, RAG, embeddings &amp; vector search, LLM-as-judge evals, LangGraph, Claude API</dd></div>
+        <div class="skill-row"><dt>Systems &amp; tools</dt><dd>PostgreSQL, pgvector, FastAPI, Next.js, Linux, SLURM/HPC, Git, pytest</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer class="colophon">
+  <p>© 2026 Patrick Yang</p>
+  <a href="mailto:py235@cornell.edu">py235@cornell.edu</a>
+  <a class="to-top" href="#top">Back to top</a>
+</footer>
+</body>
+</html>
