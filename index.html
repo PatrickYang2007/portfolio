@@ -36,18 +36,18 @@
     <div class="work-grid">
       <article class="work-card">
         <h3 class="work-title"><a href="https://github.com/PatrickYang2007/regsearch" target="_blank" rel="noopener">regsearch</a></h3>
-        <p class="work-desc">Hybrid search over genomics literature — full-text and embedding retrieval fused with reciprocal rank fusion, plus a fine-tuned reranker for +41% MRR.</p>
+        <p class="work-desc">Hybrid search over 19,791 genomics abstracts — SQL full-text and pgvector embedding retrieval fused with reciprocal rank fusion, evaluated on a graded-relevance harness (0.82 Recall@50, 0.85 nDCG@10), plus a fine-tuned cross-encoder reranker for +41% MRR.</p>
         <p class="work-tags">Python · PostgreSQL · PyTorch · FastAPI</p>
       </article>
       <article class="work-card">
-        <h3 class="work-title">Rational Activations for Genomics</h3>
-        <p class="work-desc">A matched-capacity controlled study testing whether learned rational activation functions beat GELU on sequence-to-expression regression, across 9 activation arms and 315 training runs.</p>
-        <p class="work-tags">PyTorch · SLURM · Genomics</p>
+        <h3 class="work-title"><a href="https://github.com/PatrickYang2007/reinforcement-learning/tree/main/policy-learning-for-recommendation" target="_blank" rel="noopener">Policy-Gradient Recommender</a></h3>
+        <p class="work-desc">REINFORCE training for softmax and Plackett–Luce ranking policies over a 1,000-item catalog, with two-tower embeddings learned end-to-end. Uses Gumbel-top-k sampling with stable logsumexp likelihoods, and benchmarks exact autoregressive training against the sampling-with-replacement approximation across k = 2–20.</p>
+        <p class="work-tags">Python · PyTorch · Reinforcement Learning</p>
       </article>
       <article class="work-card">
-        <h3 class="work-title">Heterogeneity Score</h3>
-        <p class="work-desc">Attention-pooled CNN predicting chromatin variability from DNA sequence alone across 5.6M genomic regions, with an analysis of why the task resists learning.</p>
-        <p class="work-tags">PyTorch · SLURM · Genomics</p>
+        <h3 class="work-title"><a href="https://github.com/PatrickYang2007/reinforcement-learning/tree/main/bear-stories-with-grpo" target="_blank" rel="noopener">GRPO Post-Training of a Small LM</a></h3>
+        <p class="work-desc">Post-trained TinyStories-33M with Group Relative Policy Optimization from scratch — group-relative advantages, the clipped importance-ratio surrogate, and a k3 KL penalty against a frozen reference. A 2×2 study of sparse vs. dense rewards and clipping vs. none, including how zero within-group reward variance stalls learning.</p>
+        <p class="work-tags">Python · PyTorch · Hugging Face Transformers</p>
       </article>
     </div>
   </section>
