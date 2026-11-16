@@ -63,7 +63,6 @@ a {
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
   padding-block: 1.5rem 1.25rem;
-  border-bottom: 1px solid var(--line);
 }
 
 .masthead-name {
@@ -147,73 +146,21 @@ a.resume-link:hover {
   color: var(--muted);
 }
 
+.bio a,
 .intro-links a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
+.bio a:hover,
 .intro-links a:hover {
   color: var(--ink);
-}
-
-/* ---------- Sections ---------- */
-
-.section {
-  border-top: 1px solid var(--line);
-  padding-block: 3rem 3.5rem;
-}
-
-.section-label {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  margin-bottom: 1.75rem;
-}
-
-/* ---------- Experience ---------- */
-
-.exp-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-}
-
-.exp-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1.25rem;
-  margin-bottom: 0.15rem;
-}
-
-.exp-org {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.exp-time {
-  font-size: 0.78rem;
-  color: var(--muted);
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-.exp-role {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 0.85rem;
-  margin-bottom: 0.45rem;
 }
 
 /* ---------- Colophon ---------- */
 
 .colophon {
-  border-top: 1px solid var(--line);
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -226,13 +173,6 @@ a.resume-link:hover {
 
 .colophon a:hover {
   color: var(--ink);
-}
-
-.colophon .to-top {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
 }
 
 /* ---------- Responsive ---------- */
@@ -249,14 +189,5 @@ a.resume-link:hover {
 
   body {
     padding-inline: 1.25rem;
-  }
-
-  .section {
-    padding-block: 2.25rem 2.5rem;
-  }
-
-  .exp-head {
-    flex-direction: column;
-    gap: 0.1rem;
   }
 }
