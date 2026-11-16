@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
    Portfolio — Swiss/editorial monochrome stylesheet
-   Lato throughout
+   Arial throughout
    Pure monochrome on white. No border-radius. No box-shadow.
    No gradients.
    ------------------------------------------------------------------ */
@@ -11,7 +11,7 @@
   --muted: #6b6b6b;
   --line: #161616;
 
-  --sans: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* ---------- Reset ---------- */
