@@ -2,7 +2,7 @@
    Portfolio — Swiss/editorial monochrome stylesheet
    Fraunces (display serif) + Inter (text sans)
    Pure monochrome on white. No border-radius. No box-shadow.
-   No gradients. Crisp 1px ink rules only.
+   No gradients.
    ------------------------------------------------------------------ */
 
 :root {
@@ -59,21 +59,10 @@ a {
 .masthead {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
   padding-block: 1.5rem 1.25rem;
-}
-
-.masthead-name {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-}
-
-.masthead-name:hover {
-  color: var(--muted);
 }
 
 .masthead-nav {
@@ -90,21 +79,6 @@ a {
 
 .masthead-nav a:hover {
   color: var(--muted);
-}
-
-.masthead-nav a.resume-link,
-a.resume-link {
-  border: 1px solid var(--ink);
-  padding: 0.4em 0.85em;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.masthead-nav a.resume-link:hover,
-a.resume-link:hover {
-  background: var(--ink);
-  color: var(--bg);
 }
 
 /* ---------- Intro ---------- */
@@ -142,12 +116,28 @@ a.resume-link:hover {
 }
 
 .intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
   font-size: 0.88rem;
   color: var(--muted);
 }
 
-.bio a,
 .intro-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.icon {
+  width: 1.05em;
+  height: 1.05em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.bio a,
+.intro-links a span {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -155,23 +145,6 @@ a.resume-link:hover {
 
 .bio a:hover,
 .intro-links a:hover {
-  color: var(--ink);
-}
-
-/* ---------- Colophon ---------- */
-
-.colophon {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  padding-block: 1.75rem 2.5rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.colophon a:hover {
   color: var(--ink);
 }
 
